@@ -9,7 +9,7 @@ import { PortifolioComponent } from './components/portifolio/portifolio.componen
 import { ContatoComponent } from './components/contato/contato.component';
 import { CurriculoComponent } from './components/curriculo/curriculo.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { TimelineModule } from 'primeng/timeline';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]
