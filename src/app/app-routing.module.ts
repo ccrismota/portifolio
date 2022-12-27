@@ -11,6 +11,7 @@ const appRoutes: Routes = [
   { path: '', component: HeaderComponent,
 
   children: [
+    { path: '', component: SobreComponent },
     { path: 'sobre', component: SobreComponent },
     { path: 'portifolio', component: PortifolioComponent },
     { path: 'contato', component: ContatoComponent },
