@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.sass']
+  selector: 'app-app-content',
+  templateUrl: './app-content.component.html',
+  styleUrls: ['./app-content.component.sass']
 })
-export class HeaderComponent implements OnInit {
+export class AppContentComponent {
+
 
   nome: string = '';
   showList: boolean = false;
@@ -24,7 +24,5 @@ export class HeaderComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
-  }
 
 }

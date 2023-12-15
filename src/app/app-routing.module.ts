@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContatoComponent } from './components/contato/contato.component';
 import { CurriculoComponent } from './components/curriculo/curriculo.component';
-import { HeaderComponent } from './components/header/header.component';
 import { PortifolioComponent } from './components/portifolio/portifolio.component';
 import { SobreComponent } from './components/sobre/sobre.component';
+import { AppContentComponent } from './components/app-content/app-content.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: HeaderComponent,
+  { path: '', component: AppContentComponent,
 
   children: [
     { path: '', component: SobreComponent },

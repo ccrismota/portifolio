@@ -1,0 +1,22 @@
+{
+    "terminal.integrated.fontWeightBold": "bold",
+    "terminal.integrated.automationProfile.linux": {},
+    "terminal.integrated.accessibleViewFocusOnCommandExecution": false,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    }
+}

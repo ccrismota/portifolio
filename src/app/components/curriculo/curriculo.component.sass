@@ -9,10 +9,10 @@
   width: 40px
   height: 5px
   margin: 2.5% 0 0 3%
-  background-color: #FEC161
+  background-color: var(--underscore)
   border-radius: 2px
 
-.sobre
+.curriculo
   display: flex
   flex-direction: column
   align-items: flex-start
@@ -20,135 +20,139 @@
   border-radius: 7px
   line-height: 1.8
 
-  .image
-    float: right
-    margin: -30% 3% 0 0
-    img
-      width: 500px
-      height: 250px
-      object-fit: cover
-      border-radius: 70% 50% 70% 5%
-      border: 1px solid #fdda6f
-      box-shadow: 0 0 10px #FEC161
+  // .image
+  //   float: right
+  //   margin: -30% 3% 0 0
+  //   img
+  //     width: 500px
+  //     height: 250px
+  //     object-fit: cover
+  //     border-radius: 70% 50% 70% 5%
+  //     border: 1px solid #fdda6f
+  //     box-shadow: 0 0 10px #FEC161
 
-  .container
-    margin: 2.5% 3% 0 3%
-    top: 80px
-    text-align: justify
-    .container-title
-      .icon-school
-        float: left
-        display: flex
-        align-items: center
-        padding: 5px
-        border: 1px solid #383838
-        border-radius: 5px
-        span
-          font-size: 20px
-          color: #fdda6f
-      h3
-        float: left
-        margin: -2px 0 -5px 15px
+.container
+  display: flex
+  flex-direction: column
+  margin: 2.5% 3% 0 3%
+  top: 80px
+  text-align: justify
+  .container-title
+    .icon-school
+      float: left
+      display: flex
+      align-items: center
+      padding: 5px
+      border: 1px solid var(--line-color)
+      border-radius: 5px
+      span
         font-size: 20px
-
-    .container-subtitle
-      .icon-sub
-        float: left
-        display: flex
-        margin: 0 0 0 6px
-        padding: 2px
-        border: 1px solid #383838
-        border-radius: 50%
-        span
-          font-size: 10px
-          margin: 1.2px
-          background-color: #fdda6f
-          border-radius: 50%
-      h3
-        float: left
-        margin: -5px 0 -5px 23px
-        font-size: 15px
-
-  .line-timeline-1
-    clear: both
-    border-left: 1px solid #383838
-    height: 25px
-    margin: 0 0 0 15px
-
-  .line-timeline-2
-    clear: both
-    border-left: 1px solid #383838
-    height: 80px
-    margin: 0 0 0 15px
-
-  .line-timeline-3
-    clear: both
-    border-left: 1px solid #383838
-    height: 115px
-    margin: 0 0 0 15px
-
-  .timeline-body
-    display: flex
-    flex-direction: column
-    span
-      margin: 10px 0 -7px 31px
-      color: #fdda6f
-    p
-      margin: 10px 0 -7px 31px
-      color: #D6D6D6
-
-  .icon-work
-    float: left
-    display: flex
-    align-items: center
-    padding: 5px
-    border: 1px solid #383838
-    border-radius: 5px
-    span
+        color: var(--icon-color)
+    h3
+      float: left
+      margin: 0 0 0 15px
+      padding: 0 0 5px 0
       font-size: 20px
-      color: #fdda6f
+
+  .container-subtitle
+    .icon-sub
+      float: left
+      display: flex
+      margin: 0 0 0 6px
+      padding: 2px
+      border: 1px solid var(--line-color)
+      border-radius: 50%
+      span
+        font-size: 10px
+        margin: 1.2px
+        background-color: var(--icon-color)
+        border-radius: 50%
+    h4
+      float: left
+      margin: -2px 0 -5px 23px
+      font-size: 15px
+
+.timeline-body
+  display: flex
+  flex-direction: column
+  padding-bottom: 20px
+  span
+    margin: 10px 0 -7px 31px
+    color: var(--icon-color)
+  p
+    margin: 10px 0 -7px 31px
+    color: var(--text-color-second)
   h4
-    float: left
-    margin: 10px 0 -5px 32px
+    padding: 15px 7px 0 7px
     font-size: 15px
+    width: 100%
+
+.icon-work
+  float: left
+  display: flex
+  align-items: center
+  padding: 5px
+  border: 1px solid var(--line-color)
+  border-radius: 5px
+  span
+    font-size: 20px
+    color: var(--icon-color)
+
+.line-timeline-1
+  clear: both
+  border-left: 1px solid var(--line-color)
+  height: 100%
+  margin: 0 0 0 15px
+
+.line-timeline-2
+  clear: both
+  border-left: 1px solid var(--line-color)
+  height: 100%
+  margin: 0 0 0 15px
+  padding-bottom: 20px
+
+.line-timeline-3
+  clear: both
+  border-left: 1px solid var(--line-color)
+  height: 115px
+  margin: 0 0 0 15px
 
 .line-timeline-4
-    clear: both
-    border-left: 1px solid #383838
-    height: 220px
-    margin: 0 0 0 15px
+  clear: both
+  border-left: 1px solid var(--line-color)
+  height: 100%
+  margin: 0 0 0 15px
 
 .line-timeline-5
-    clear: both
-    border-left: 1px solid #383838
-    height: 165px
-    margin: 0 0 0 15px
+  clear: both
+  border-left: 1px solid var(--line-color)
+  height: 100%
+  margin: 0 0 0 15px
 
 .line-timeline-6
-    clear: both
-    border-left: 1px solid #383838
-    height: 200px
-    margin: 0 0 0 15px
+  clear: both
+  border-left: 1px solid var(--line-color)
+  height: 100%
+  margin: 0 0 0 15px
 
 .line-timeline-7
-    clear: both
-    border-left: 1px solid #383838
-    height: 165px
-    margin: 0 0 0 15px
+  clear: both
+  border-left: 1px solid var(--line-color)
+  height: 100%
+  margin: 0 0 0 15px
 
 .line-timeline-8
-    clear: both
-    border-left: 1px solid #383838
-    height: 320px
-    margin: 0 0 0 15px
+  clear: both
+  border-left: 1px solid var(--line-color)
+  height: 100%
+  margin: 0 0 0 15px
 
 .line-timeline-9
-    clear: both
-    border-left: 1px solid #383838
-    height: 290px
-    margin: 0 0 0 15px
+  clear: both
+  border-left: 1px solid var(--line-color)
+  height: 100%
+  margin: 0 0 0 15px
 
 .line-timeline-10
-    clear: both
-    margin: 0 0 0 15px
-
+  clear: both
+  margin: 0 0 0 15px

@@ -1,0 +1,102 @@
+
+    <div class="header" [ngClass]="alterarClasseMenu">
+        <figure>
+            <div class="header-img-border">
+                <img src="https://github.com/ccrismota.png" class="header-img" alt="Cícero Cristiano Rodrigues da Mota">
+            </div>
+        </figure>
+        <div class="header-name">
+            <h3>Cícero Cristiano Rodrigues da Mota</h3>
+            <p class="header-profession">Full Stack Develop</p>
+        </div>
+        <!-- Mobile part init (Menu)-->
+        <div class="header-list" *ngIf="!showList; else close">
+            <span class="material-symbols-outlined" (click)="clickMenu()">contact_phone</span>
+        </div>
+        <ng-template #close>
+            <div class="header-list">
+                <span class="material-symbols-outlined" (click)="clickMenu()">close</span>
+            </div>
+        </ng-template>
+        <!-- Mobile part end (Menu)-->
+        <div class="header-contact" *ngIf="showList">
+            <ul>
+                <li class="header-email">
+                    <span class="material-symbols-outlined">mail</span>
+                    <P>EMAIL</P>
+                    <a href="#">ccrismota@gmail.com</a>
+                </li>
+                <li class="header-cell">
+                    <span class="material-symbols-outlined">phone_android</span>
+                    <p>CELULAR</p>
+                    <a href="#"> +55 (11) 9 6508-6536</a>
+                </li>
+                <li class="header-bithday">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                    <p>ANIVERSARIO</p>
+                    <a href="#"> 14 Fevereiro, 1987</a>
+                </li>
+                <li class="header-location">
+                    <span class="material-symbols-outlined">home_pin</span>
+                    <p>ENDEREÇO</p>
+                    <a href="">Vila Formosa,
+                        São Paulo</a>
+                </li>
+            </ul>
+            <div class="header-social-media">
+                <ul>
+                    <li>
+                        <a href="https://github.com/ccrismota"><img src="assets/github-icon.svg" alt="Github"></a>
+                    </li>
+                    <li id="linkedin">
+                        <a href="https://www.linkedin.com/in/ccrismota/"><img src="assets/linkedin-icon.svg"
+                                alt="Linkedin"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- mobile section init-->
+        <div class="header-contact header-contact-main">
+            <ul>
+                <li class="header-email">
+                    <span class="material-symbols-outlined">mail</span>
+                    <P>EMAIL</P>
+                    <a href="#">ccrismota@gmail.com</a>
+                </li>
+                <li class="header-cell">
+                    <span class="material-symbols-outlined">phone_android</span>
+                    <p>CELULAR</p>
+                    <a href="#"> +55 (11) 9 6508-6536</a>
+                </li>
+                <li class="header-bithday">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                    <p>ANIVERSARIO</p>
+                    <a href="#"> 14 Fevereiro, 1987</a>
+                </li>
+                <li class="header-location">
+                    <span class="material-symbols-outlined">home_pin</span>
+                    <p>ENDEREÇO</p>
+                    <a href="">Vila Formosa,
+                        São Paulo</a>
+                </li>
+            </ul>
+            <div class="header-social-media header-contact-main-media">
+                <ul class="">
+                    <li>
+                        <a href="https://github.com/ccrismota"><img src="assets/github-icon.svg" alt="Github"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/ccrismota/"><img src="assets/linkedin-icon.svg"
+                                alt="Linkedin"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- mobile section end -->
+    </div>
+    <div>
+        <app-navbar class="nav-bar"></app-navbar>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>

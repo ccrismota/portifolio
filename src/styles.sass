@@ -1,14 +1,56 @@
-%cor-de-fundo
-  background-color: #1E1E1F
-  color: #FAFAFA
-
-.root
-  @extend %cor-de-fundo
-
-
 $font-stack: Poppins, sans-serif
 
-body
+*
   font: 100% $font-stack
   font-weight: 300
 
+/* fundo escuro*/
+$bg-color-dark: #1E1E1F //13131F /1E1E1F
+$bg2-color-dark: #212122
+$text-color-dark: #FAFAFA
+$text-color-second-dark: #a6a6aa
+$icon-color-dark: #fdda6f
+$line-color-dark: #373738
+$underscore-dark: #FEC161 //A016E4 FEC161
+
+/* fundo claro*/
+$bg-color-light: #EBEBEB //F9F9F9
+$bg2-color-light: #FAFAFA
+$text-color-light: #13131F //13131F
+$text-color-second-light: #858582
+$icon-color-light: #5B5FC7
+$line-color-light: #858582 // 373738*/
+$underscore-light: #5B5FC7
+
+@mixin dark()
+  --bg-color: #{$bg-color-dark}
+  --text-color: #{$text-color-dark}
+  --text-color-second: #{$text-color-second-dark}
+  --icon-color: #{$icon-color-dark}
+  --line-color: #{$line-color-dark}
+  --underscore: #{$underscore-dark}
+  --bg2-color: #{$bg2-color-dark}
+
+@mixin light()
+  --bg-color: #{$bg-color-light}
+  --text-color: #{$text-color-light}
+  --text-color-second: #{$text-color-second-light}
+  --icon-color: #{$icon-color-light}
+  --line-color: #{$line-color-light}
+  --underscore: #{$underscore-light}
+  --bg2-color: #{$bg2-color-light}
+
+body.dark
+  @include dark()
+
+body.light
+  @include light()
+
+body
+  background-color: var(--bg-color)
+  background-color: var(--bg2-color)
+  color: var(--text-color)
+  --text-color-second: var(--text-color-second)
+  --icon-color: var(--icon-color)
+  --line-color: var(--line-color)
+  --underscore: var(--underscore)
