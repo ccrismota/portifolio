@@ -9,6 +9,7 @@ import { CurriculoComponent } from './components/curriculo/curriculo.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TimelineModule } from 'primeng/timeline';
 import { AppContentComponent } from './components/app-content/app-content.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppContentComponent } from './components/app-content/app-content.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TimelineModule
+    TimelineModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

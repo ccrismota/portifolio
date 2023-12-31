@@ -1,14 +1,22 @@
+.limite-superior
+  position: absolute
+  display: flex
+  width: calc( 100% - 15%)
+  height: 8%
+  z-index: 999
+  background-color: var(--bg2-color)
+  
 .title-navbar
   position: absolute
+  display: flex
+  justify-content: start
   font-size: 25px
-  margin: 2px 0 0 2%
-  padding: 0
-  top: 10px
+  margin: -35px 0 0 2%
 
 .line
   width: 40px
   height: 5px
-  margin: 2.5% 0 0 3%
+  margin: 3% 0 0 2.6%
   background-color: var(--underscore)
   border-radius: 2px
 
@@ -19,17 +27,10 @@
   justify-content: start
   border-radius: 7px
   line-height: 1.8
+  
+  section:nth-child(1)
+    margin-top: 7%
 
-  // .image
-  //   float: right
-  //   margin: -30% 3% 0 0
-  //   img
-  //     width: 500px
-  //     height: 250px
-  //     object-fit: cover
-  //     border-radius: 70% 50% 70% 5%
-  //     border: 1px solid #fdda6f
-  //     box-shadow: 0 0 10px #FEC161
 
 .container
   display: flex
@@ -54,23 +55,27 @@
       padding: 0 0 5px 0
       font-size: 20px
 
-  .container-subtitle
-    .icon-sub
-      float: left
-      display: flex
-      margin: 0 0 0 6px
-      padding: 2px
-      border: 1px solid var(--line-color)
+// .container-subtitle
+//   border: 1px solid red
+
+.container-subtitle
+  .icon-sub
+    float: left
+    display: flex
+    margin: 0 0 0 6px
+    padding: 2px
+    border: 1px solid var(--line-color)
+    border-radius: 50%
+    span
+      font-size: 10px
+      margin: 1.2px
+      background-color: var(--icon-color)
       border-radius: 50%
-      span
-        font-size: 10px
-        margin: 1.2px
-        background-color: var(--icon-color)
-        border-radius: 50%
-    h4
-      float: left
-      margin: -2px 0 -5px 23px
-      font-size: 15px
+  h4
+    float: left
+    margin: -2px 0 -5px 23px
+    font-size: 15px
+   
 
 .timeline-body
   display: flex
@@ -86,6 +91,7 @@
     padding: 15px 7px 0 7px
     font-size: 15px
     width: 100%
+    
 
 .icon-work
   float: left
