@@ -1,3 +1,5 @@
+@import "primeicons/primeicons.css"
+  
 .header
   float: left
   display: flex
@@ -56,6 +58,11 @@
       color: var(--text-color)
       margin: 0 0 0 15px
       font-size: 14px
+    span
+      text-decoration: none
+      color: var(--text-color)
+      margin: 0 0 0 15px
+      font-size: 14px
     p
       text-align: left
       color: var(--text-color-second)
@@ -73,22 +80,21 @@
 
 .header-social-media
   display: flex
-  margin: -5px 0 0 7px
+  margin: -5px 0 0 0
   li
     list-style-type: none
     float: left
     a
       text-decoration: none
-      padding: 0 5px 0 2px
-  img
-    border: 1px solid var(--line-color)
-    width: 30px
-    margin: 0 5px
-  img:hover
-    background-color: #fdda6f
-    border: 1px solid #fdda6f
-    border-radius: 50%
-    // transition: 0.2s
+      padding: 0 5px 0 0
+  i
+    font-size: 25px 
+
+  .pi-whatsapp 
+    color: #25D366
+  
+  .pi-linkedin
+    color: #0077B5
 
 .container
   display: flex
