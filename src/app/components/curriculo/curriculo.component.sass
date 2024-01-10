@@ -1,10 +1,21 @@
 .limite-superior
   position: absolute
-  display: flex
-  width: 85%
+  width: calc( 100% - 247px )
   height: 8%
   z-index: 999
   background-color: var(--bg2-color)
+  a
+    position: absolute
+    text-decoration: none
+    color: var(--icon-color)
+    margin: -18px 0 0 calc( 100% - 150px)
+    font-size: 12px	  
+    &:hover
+      color: var(--text-color)
+      text-decoration: underline
+  i 
+    padding: 0 7px
+
  
 .title-navbar
   position: absolute
@@ -24,7 +35,7 @@
   display: flex
   flex-direction: column
   align-items: flex-start
-  justify-content: start
+  justify-content: flex-start
   border-radius: 7px
   line-height: 1.8
   
@@ -104,61 +115,10 @@
     font-size: 20px
     color: var(--icon-color)
 
-.line-timeline-1
+.line-timeline-1, .line-timeline-2, .line-timeline-3, .line-timeline-4,
+.line-timeline-5, .line-timeline-6, .line-timeline-7, .line-timeline-8,
+.line-timeline-9, .line-timeline-10
   clear: both
   border-left: 1px solid var(--line-color)
   height: 100%
-  margin: 0 0 0 15px
-
-.line-timeline-2
-  clear: both
-  border-left: 1px solid var(--line-color)
-  height: 100%
-  margin: 0 0 0 15px
-  padding-bottom: 20px
-
-.line-timeline-3
-  clear: both
-  border-left: 1px solid var(--line-color)
-  height: 115px
-  margin: 0 0 0 15px
-
-.line-timeline-4
-  clear: both
-  border-left: 1px solid var(--line-color)
-  height: 100%
-  margin: 0 0 0 15px
-
-.line-timeline-5
-  clear: both
-  border-left: 1px solid var(--line-color)
-  height: 100%
-  margin: 0 0 0 15px
-
-.line-timeline-6
-  clear: both
-  border-left: 1px solid var(--line-color)
-  height: 100%
-  margin: 0 0 0 15px
-
-.line-timeline-7
-  clear: both
-  border-left: 1px solid var(--line-color)
-  height: 100%
-  margin: 0 0 0 15px
-
-.line-timeline-8
-  clear: both
-  border-left: 1px solid var(--line-color)
-  height: 100%
-  margin: 0 0 0 15px
-
-.line-timeline-9
-  clear: both
-  border-left: 1px solid var(--line-color)
-  height: 100%
-  margin: 0 0 0 15px
-
-.line-timeline-10
-  clear: both
   margin: 0 0 0 15px

@@ -1,3 +1,11 @@
+.limite-superior
+  position: absolute
+  display: flex
+  width: calc( 100% - 247px )
+  height: 8%
+  z-index: 999
+  background-color: var(--bg2-color)
+  
 .title-navbar
   position: absolute
   font-size: 25px
@@ -12,7 +20,7 @@
   background-color: var(--underscore)
   border-radius: 2px
 
-.sobre
+.portifolio
   display: flex
   flex-direction: column
   align-items: flex-start
@@ -20,7 +28,60 @@
   border-radius: 7px
   line-height: 1.8
   p
-    margin: 25px 25px 0 25px
+    margin: 15px 25px 0 25px
     top: 80px
     text-align: justify
 
+  section:nth-child(1)
+    margin-top: 30px
+
+.d-flex
+  display: flex
+  flex-direction: row
+  align-items: center
+  flex-wrap: wrap
+  justify-content: start
+  margin: 0
+
+
+.html, .javascript, .css, .angular, .java,
+.linguageC, .mysql, .react, .node, .typescript,
+.git, .github, .eclipse, .spring, .bootstrap,
+.intellij, .php, .python, .figma, .git, 
+.postgres, .github, .npm, .sass, .trelo, 
+.django, .android, .flask, .yarn, .oracleCloud,
+.auth0, .pycharm, .vscode
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  margin: 18px
+  width: 80px
+  height: 80px
+  padding: 0
+  font-size: 12px
+  color: var(--text-color)   
+  p
+    margin-top: -2px 
+
+    
+.vscode:hover, .html:hover, .javascript:hover, .css:hover, .angular:hover, 
+.java:hover, .linguageC:hover, .mysql:hover, .react:hover, .node:hover, 
+.typescript:hover, .git:hover, .github:hover, .eclipse:hover, .spring:hover, 
+.bootstrap:hover,.intellij:hover, .php:hover, .python:hover, .figma:hover, 
+.git:hover, .postgres:hover, .github:hover,.npm:hover, .sass:hover, 
+.trelo:hover, .django:hover, .android:hover, .flask:hover, .yarn:hover, 
+.oracleCloud:hover,.auth0:hover, .pycharm:hover
+  transform: scale(1.3)
+  transition: all 0.3s ease-in-out
+
+   
+.github, .flask
+  fill: var(--github)
+
+.auth0, .pycharm
+  display: flex
+  align-items: center
+  flex-direction: column
+  width: 50
+  height: 50

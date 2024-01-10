@@ -12,6 +12,7 @@ $text-color-second-dark: #a6a6aa
 $icon-color-dark: #fdda6f
 $line-color-dark: #373738
 $underscore-dark: #FEC161 //A016E4 FEC161
+$github-dark: #FFFFFF
 
 /* fundo claro*/
 $bg-color-light: #EBEBEB //F9F9F9
@@ -21,6 +22,7 @@ $text-color-second-light: #858582
 $icon-color-light: #5B5FC7
 $line-color-light: #858582 // 373738*/
 $underscore-light: #5B5FC7
+$github-light: #181616
 
 @mixin dark()
   --bg-color: #{$bg-color-dark}
@@ -30,6 +32,7 @@ $underscore-light: #5B5FC7
   --line-color: #{$line-color-dark}
   --underscore: #{$underscore-dark}
   --bg2-color: #{$bg2-color-dark}
+  --github: #{$github-dark}
 
 @mixin light()
   --bg-color: #{$bg-color-light}
@@ -39,6 +42,7 @@ $underscore-light: #5B5FC7
   --line-color: #{$line-color-light}
   --underscore: #{$underscore-light}
   --bg2-color: #{$bg2-color-light}
+  --github: #{$github-light}
 
 body.dark
   @include dark()
@@ -54,3 +58,4 @@ body
   --icon-color: var(--icon-color)
   --line-color: var(--line-color)
   --underscore: var(--underscore)
+  --github: var(--github)
