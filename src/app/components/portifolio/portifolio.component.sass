@@ -1,3 +1,4 @@
+
 .limite-superior
   position: absolute
   display: flex
@@ -5,7 +6,7 @@
   height: 8%
   z-index: 999
   background-color: var(--bg2-color)
-  
+
 .title-navbar
   position: absolute
   font-size: 25px
@@ -33,9 +34,9 @@
     text-align: justify
 
   section:nth-child(1)
-    margin-top: 30px
+    margin-top: 3.3%
 
-.d-flex
+.d-flex-2
   display: flex
   flex-direction: row
   align-items: center
@@ -43,12 +44,11 @@
   justify-content: start
   margin: 0
 
-
 .html, .javascript, .css, .angular, .java,
 .linguageC, .mysql, .react, .node, .typescript,
 .git, .github, .eclipse, .spring, .bootstrap,
-.intellij, .php, .python, .figma, .git, 
-.postgres, .github, .npm, .sass, .trelo, 
+.intellij, .php, .python, .figma, .git,
+.postgres, .github, .npm, .sass, .trelo,
 .django, .android, .flask, .yarn, .oracleCloud,
 .auth0, .pycharm, .vscode
   display: flex
@@ -60,22 +60,20 @@
   height: 80px
   padding: 0
   font-size: 12px
-  color: var(--text-color)   
+  color: var(--text-color)
   p
-    margin-top: -2px 
+    margin-top: -2px
 
-    
-.vscode:hover, .html:hover, .javascript:hover, .css:hover, .angular:hover, 
-.java:hover, .linguageC:hover, .mysql:hover, .react:hover, .node:hover, 
-.typescript:hover, .git:hover, .github:hover, .eclipse:hover, .spring:hover, 
-.bootstrap:hover,.intellij:hover, .php:hover, .python:hover, .figma:hover, 
-.git:hover, .postgres:hover, .github:hover,.npm:hover, .sass:hover, 
-.trelo:hover, .django:hover, .android:hover, .flask:hover, .yarn:hover, 
+.vscode:hover, .html:hover, .javascript:hover, .css:hover, .angular:hover,
+.java:hover, .linguageC:hover, .mysql:hover, .react:hover, .node:hover,
+.typescript:hover, .git:hover, .github:hover, .eclipse:hover, .spring:hover,
+.bootstrap:hover,.intellij:hover, .php:hover, .python:hover, .figma:hover,
+.git:hover, .postgres:hover, .github:hover,.npm:hover, .sass:hover,
+.trelo:hover, .django:hover, .android:hover, .flask:hover, .yarn:hover,
 .oracleCloud:hover,.auth0:hover, .pycharm:hover
   transform: scale(1.3)
   transition: all 0.3s ease-in-out
 
-   
 .github, .flask
   fill: var(--github)
 
@@ -85,3 +83,80 @@
   flex-direction: column
   width: 50
   height: 50
+
+//projetos
+
+.card
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  margin: 20px 43px
+  &:hover
+    transform: scale(1.2)
+    transition: all 0.5s ease-in-out
+    background-color: none
+    .card-body::after
+      width: 0
+      height: 0
+    .card-body p
+      display: none
+
+.card-body
+  height: 101px
+  border: 1px solid var(--text-color-second)
+  color: var(--text-color)
+  border-radius: 3px 3px 0 0
+
+  &::after
+    display: block
+    text-align: center
+    opacity: 90%
+    content: ''
+    background-color: var(--bg-project)
+    font-weight: bold
+    width: 100%
+    height: 100.5%
+    margin: -146.5px 0 0 0
+      
+
+.card-body p
+  position: relative
+  color: #fff
+  font-weight: bold
+  z-index: 999
+  top: -80px
+  left: 15px
+
+
+.card-footer
+  display: flex
+  flex-direction: row
+  align-items: center
+  width: 100%
+  height: 30px
+  justify-content: space-between
+  border: 1px solid var(--text-color-second)
+  background-color: var(--bg-vermais)
+  border-radius: 0 0 7px 7px
+  padding: 0 5px
+  font-size: 10px
+
+  h5
+    padding: 0 7px 0 0
+
+  span
+    text-decoration: none
+    font-weight: bold
+    width: 60px
+    border-radius: 5px
+    padding: 2px 5px
+    color: var(--icon-color)
+    transition: 0.5s ease-in-out
+    &:hover
+      color: var(--icon-color)
+      text-decoration: underline
+      transition: 0.3s ease-in-out
+      cursor: pointer
+
+

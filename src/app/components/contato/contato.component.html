@@ -2,133 +2,90 @@
   <h2 class="title-navbar">Contato</h2>
   <div class="sobre">
     <div class="line"></div>
-    <section class="section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="wrapper">
-              <div class="row no-gutters d-flex w-100">
-                <div class="col d-flex align-items-stretch">
-                  <div class="contact-wrap w-100 p-md-5 p-4 py-5">
-                    <h3 class="mb-4">Me envie uma Mensagem</h3>
-                    <div id="form-message-warning" class="mb-4"></div>
-                    <div id="form-message-success" class="mb-4">
-                      Sua mensagem foi enviada com sucesso!
+    <section class="container-fluid">
+      <div class="row d-flex w-100 mx-1 py-4 align-items-stretch">
+        <div class="col d-flex align-items-stretch pb-4">
+          <div class="contact-wrap w-100 ">
+            <h3 class="mb-4">Me envie uma Mensagem</h3>
+            <div [formGroup]="contatoForm">
+              <form action="javascript:void(0)" (submit)="sendEmail()" id="contactForm" name="contactForm"
+                class="contactForm">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input formControlName="from_name" type="text" class="form-control" name="name" id="name"
+                        placeholder="Nome" required="name" minlength="4" />
+                      <small style="color: red">
+                        <span
+                          *ngIf="contatoForm.get('from_name')?.errors?.['required'] && contatoForm.get('from_name')?.touched">
+                          O nome é obrigatório
+                        </span>
+                        <span
+                          *ngIf="contatoForm.get('from_name')?.errors?.['minlength'] && contatoForm.get('from_name')?.touched">
+                          O nome deve ter no mínimo 4 caracteres.
+                        </span>
+                      </small>
                     </div>
-                    <div [formGroup]="contatoForm">
-                      <form action="javascript:void(0)" (submit)="sendEmail()" id="contactForm" name="contactForm" class="contactForm">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <input 
-                              formControlName="from_name"
-                              type="text" 
-                              class="form-control" 
-                              name="name" 
-                              id="name" 
-                              placeholder="Nome">
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <input 
-                              formControlName="from_email"
-                              type="email" 
-                              class="form-control" 
-                              name="email" 
-                              id="email" 
-                              placeholder="Email">
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <input 
-                              formControlName="subject"
-                              type="text" 
-                              class="form-control" 
-                              name="subject" 
-                              id="subject" 
-                              placeholder="Assunto">
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea 
-                              formControlName="message"
-                              name="message" 
-                              class="form-control" 
-                              id="message" 
-                              cols="30" 
-                              rows="6"
-                                placeholder="Mensagem"></textarea>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <input 
-                              type="submit" 
-                              value="Enviar Mensagem" 
-                              class="btn btn-primary w-100">
-                              <div class="submitting"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </form>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input formControlName="from_email" type="email" class="form-control" name="email" id="email"
+                          placeholder="exemplo@gmail.com" required="email" />
+                        <small style="color: red">
+                          <span
+                            *ngIf="contatoForm.get('from_email')?.errors?.['required'] && contatoForm.get('from_email')?.touched">
+                            O email é obrigatório.
+                          </span>
+                          <span
+                            *ngIf="contatoForm.get('from_email')?.errors?.['email'] && contatoForm.get('from_email')?.touched">
+                            Email inválido. Ex: exemplo@gmail.com
+                          </span>
+                        </small>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input formControlName="subject" type="text" class="form-control" name="subject" id="subject"
+                          placeholder="Assunto" required="subject" />
+                        <small style="color: red">
+                          <span
+                            *ngIf="contatoForm.get('subject')?.errors?.['required'] && contatoForm.get('subject')?.touched">
+                            O assunto é obrigatório.
+                          </span>
+                        </small>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <textarea formControlName="message" name="message" class="form-control" id="message" cols="30"
+                          rows="6" placeholder="Mensagem" required="message">
+                                </textarea>
+                        <small style="color: red">
+                          <span
+                            *ngIf="contatoForm.get('message')?.errors?.['required'] && contatoForm.get('message')?.touched">
+                            A mensagem é obrigatória.
+                          </span>
+                        </small>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="submit" value="Enviar Mensagem" class="btn btn-primary w-100"
+                          [disabled]="contatoForm.invalid">
+                        <div class="submitting"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-
-                <div class="col d-flex align-items-stretch w-100 contact-space">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17395.869285731715!2d-46.55255882584942!3d-23.567328985572733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5dc4a49e16dd%3A0x51b4f99af24814e1!2sVila%20Formosa%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1703729672993!5m2!1spt-BR!2sbr&theme=dark"
-                    width="100%" height="95%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                  </iframe>
-                  <!-- <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17395.869285731715!2d-46.55255882584942!3d-23.567328985572733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5dc4a49e16dd%3A0x51b4f99af24814e1!2sVila%20Formosa%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1703729672993!5m2!1spt-BR!2sbr&theme=dark"
-                    width="100%" height="95%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                  </iframe> -->
-                  <!-- <div class="info-wrap w-100 p-md-5 p-4 py-5 img">
-                    <h3>Informações de contato</h3>
-                    <p class="mb-4">Estou disponível para sugestões, proposta ou simplesmente para bater um papo.</p>
-                    <div class="dbox w-100 d-flex align-items-start">
-                      <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="fa fa-map-marker"></span>
-                      </div>
-                      <div class="text pl-3">
-                        <p><span>Endereço:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
-                      </div>
-                    </div>
-                    <div class="dbox w-100 d-flex align-items-center">
-                      <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="fa fa-phone"></span>
-                      </div>
-                      <div class="text pl-3">
-                        <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-                      </div>
-                    </div>
-                    <div class="dbox w-100 d-flex align-items-center">
-                      <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="fa fa-paper-plane"></span>
-                      </div>
-                      <div class="text pl-3">
-                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                      </div>
-                    </div>
-                    <div class="dbox w-100 d-flex align-items-center">
-                      <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="fa fa-globe"></span>
-                      </div>
-                      <div class="text pl-3">
-                        <p><span>Website</span> <a href="#">yoursite.com</a></p>
-                      </div>
-                    </div>
-                  </div> -->
-                </div>
-              </div>
+              </form>
             </div>
           </div>
+        </div>
+        <div class="col d-flex align-items-stretch w-100 contact-space">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17395.869285731715!2d-46.55255882584942!3d-23.567328985572733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5dc4a49e16dd%3A0x51b4f99af24814e1!2sVila%20Formosa%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1703729672993!5m2!1spt-BR!2sbr&theme=dark"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </section>

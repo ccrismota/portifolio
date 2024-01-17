@@ -13,6 +13,8 @@ $icon-color-dark: #fdda6f
 $line-color-dark: #373738
 $underscore-dark: #FEC161 //A016E4 FEC161
 $github-dark: #FFFFFF
+$bg-vermais-pjto-dark: #333333
+$bg-projetos-dark: #000000a6
 
 /* fundo claro*/
 $bg-color-light: #EBEBEB //F9F9F9
@@ -23,6 +25,8 @@ $icon-color-light: #5B5FC7
 $line-color-light: #858582 // 373738*/
 $underscore-light: #5B5FC7
 $github-light: #181616
+$bg-vermais-pjto-light: #e9e6e6
+$bg-projetos-light: #00000059 
 
 @mixin dark()
   --bg-color: #{$bg-color-dark}
@@ -33,6 +37,8 @@ $github-light: #181616
   --underscore: #{$underscore-dark}
   --bg2-color: #{$bg2-color-dark}
   --github: #{$github-dark}
+  --bg-vermais: #{$bg-vermais-pjto-dark}
+  --bg-project: #{$bg-projetos-dark}
 
 @mixin light()
   --bg-color: #{$bg-color-light}
@@ -43,6 +49,8 @@ $github-light: #181616
   --underscore: #{$underscore-light}
   --bg2-color: #{$bg2-color-light}
   --github: #{$github-light}
+  --bg-vermais: #{$bg-vermais-pjto-light}
+  --bg-project: #{$bg-projetos-light}
 
 body.dark
   @include dark()
@@ -59,3 +67,5 @@ body
   --line-color: var(--line-color)
   --underscore: var(--underscore)
   --github: var(--github)
+  --bg-vermais: var(--bg-vermais)
+  --bg-project: var(--bg-project)

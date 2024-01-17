@@ -7,7 +7,7 @@
     <section class="container d-flex">
       <p>Tecnologias mais utilizadas nos projetos pessoais e maior contato</p>
 
-      <div class="d-flex">
+      <div class="d-flex-2 col">
 
         <div class="vscode col">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" height="50" width="70">
@@ -97,7 +97,7 @@
         <div class="npm col">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" height="50" width="70">
             <path fill="#cb3837"
-              d="M2 38.5h124v43.71H64v7.29H36.44v-7.29H2zm6.89 36.43h13.78V53.07h6.89v21.86h6.89V45.79H8.89zm34.44-29.14v36.42h13.78v-7.28h13.78V45.79zm13.78 7.29H64v14.56h-6.89zm20.67-7.29v29.14h13.78V53.07h6.89v21.86h6.89V53.07h6.89v21.86h6.89V45.79z" />
+              d="M2 38.5h124v43.71H64v7.29h56.44v-7.29H2zm6.89 36.43h13.78V53.07h6.89v21.86h6.89V45.79H8.89zm34.44-29.14v36.42h13.78v-7.28h13.78V45.79zm13.78 7.29H64v14.56h-6.89zm20.67-7.29v29.14h13.78V53.07h6.89v21.86h6.89V53.07h6.89v21.86h6.89V45.79z" />
           </svg>
           <p>npm</p>
         </div>
@@ -243,7 +243,7 @@
 
       <p>Tecnologias com as quais já tive contato</p>
 
-      <div class="d-flex">
+      <div class="d-flex-2 col">
 
         <div class="intellij col">
           <img src="assets/img/IntelliJ.png" alt="IntelliJ" height="50" width="50">
@@ -405,7 +405,35 @@
 
     <p>Projetos</p>
 
+    <section class="d-flex-2">
 
+      <div class="card col">
+        <div class="card-body">
+          <img src="assets/img/chale.png" alt="Página inicial do projeto" style="width: 180px; height: 100px;">
+          <p>Chalé Hotel</p>
+        </div>
+        <div class="card-footer">
+          <h5>07 novembro 2021</h5>
+          <span type="button" (click)="openModal()" data-toggle="modal" data-target="#myModal">Ver mais</span>
+          <!-- <a href="https://ccrismota.github.io/site-chale/">Ver mais</a> -->
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
 
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" (click)="closeModal()">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      
+    </div>
   </div>
 </div>
