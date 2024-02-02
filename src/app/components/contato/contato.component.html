@@ -1,6 +1,6 @@
 <div>
   <h2 class="title-navbar">Contato</h2>
-  <div class="sobre">
+  <div class="contato">
     <div class="line"></div>
     <section class="container-fluid">
       <div class="row d-flex w-100 mx-1 py-4 align-items-stretch">
@@ -33,7 +33,7 @@
                         <small style="color: red">
                           <span
                             *ngIf="contatoForm.get('from_email')?.errors?.['required'] && contatoForm.get('from_email')?.touched">
-                            O email é obrigatório.
+                            O email é obrigatório
                           </span>
                           <span
                             *ngIf="contatoForm.get('from_email')?.errors?.['email'] && contatoForm.get('from_email')?.touched">
@@ -49,7 +49,7 @@
                         <small style="color: red">
                           <span
                             *ngIf="contatoForm.get('subject')?.errors?.['required'] && contatoForm.get('subject')?.touched">
-                            O assunto é obrigatório.
+                            O assunto é obrigatório
                           </span>
                         </small>
                       </div>

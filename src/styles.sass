@@ -4,6 +4,7 @@ $font-stack: Poppins, sans-serif
   font: 100% $font-stack
   font-weight: 300
 
+
 /* fundo escuro*/
 $bg-color-dark: #1E1E1F //13131F /1E1E1F
 $bg2-color-dark: #212122
@@ -29,6 +30,8 @@ $bg-vermais-pjto-light: #e9e6e6
 $bg-projetos-light: #00000059 
 
 @mixin dark()
+  background-color: var(--bg2-color)
+  background-color: var(--bg2-color)
   --bg-color: #{$bg-color-dark}
   --text-color: #{$text-color-dark}
   --text-color-second: #{$text-color-second-dark}
@@ -41,6 +44,8 @@ $bg-projetos-light: #00000059
   --bg-project: #{$bg-projetos-dark}
 
 @mixin light()
+  background-color: var(--bg2-color)
+  background-color: var(--bg2-color)
   --bg-color: #{$bg-color-light}
   --text-color: #{$text-color-light}
   --text-color-second: #{$text-color-second-light}
@@ -57,15 +62,3 @@ body.dark
 
 body.light
   @include light()
-
-body
-  background-color: var(--bg-color)
-  background-color: var(--bg2-color)
-  color: var(--text-color)
-  --text-color-second: var(--text-color-second)
-  --icon-color: var(--icon-color)
-  --line-color: var(--line-color)
-  --underscore: var(--underscore)
-  --github: var(--github)
-  --bg-vermais: var(--bg-vermais)
-  --bg-project: var(--bg-project)

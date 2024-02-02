@@ -18,6 +18,7 @@
 
 .title-navbar
   position: absolute
+  color: var(--text-color)
   font-size: 25px
   margin: -5px 0 0 25px
   padding: 0
@@ -32,19 +33,21 @@
 
 .curriculo
   display: flex
+  color: var(--text-color)
   flex-direction: column
   align-items: flex-start
   justify-content: flex-start
   border-radius: 7px
   line-height: 1.8
+  overflow-x: hidden
 
   section:nth-child(1)
-    margin-top: 4.5%
+    margin-top: 7%
 
-  .container
+  .container-fluid
     display: flex
     flex-direction: column
-    margin: 25px 25px 0 25px
+    margin: 25px 0px 0 15px
     top: 80px
     text-align: justify
 
@@ -59,11 +62,11 @@
       span
         font-size: 20px
         color: var(--icon-color)
-      h3
-        float: left
-        margin: 0 0 0 15px
-        padding: 0 0 5px 0
-        font-size: 20px
+    h3
+      float: left
+      margin: 0 0 0 15px
+      padding: 0 0 5px 0
+      font-size: 20px
 
   .container-subtitle
     .icon-sub
@@ -80,7 +83,7 @@
         border-radius: 50%
     h4
       float: left
-      margin: -2px 0 -5px 23px
+      margin: 0 0 -5px 23px
       font-size: 15px
 
   .timeline-body
@@ -89,14 +92,15 @@
     padding-bottom: 20px
     span
       margin: 10px 0 -7px 31px
-      color: var(--icon-color)
+      color: var(--icon-color)  
     p
       margin: 10px 0 -7px 31px
       color: var(--text-color-second)
-    h4
-      padding: 15px 7px 0 7px
+    h5
+      padding: 15px 7px 0 33px
       font-size: 15px
       width: 100%
+      
 
   .icon-work
     float: left
@@ -109,10 +113,14 @@
       font-size: 20px
       color: var(--icon-color)
 
-  .line-timeline-1, .line-timeline-2, .line-timeline-3, .line-timeline-4,
-  .line-timeline-5, .line-timeline-6, .line-timeline-7, .line-timeline-8,
-  .line-timeline-9, .line-timeline-10
+  .line-timeline-1, .line-timeline-2, .line-timeline-3, 
+  .line-timeline-4, .line-timeline-5, .line-timeline-6, 
+  .line-timeline-7, .line-timeline-8, .line-timeline-9, 
+  .line-timeline-10
     clear: both
     border-left: 1px solid var(--line-color)
     height: 100%
     margin: 0 0 0 15px
+
+  .line-timeline-10
+    border: none

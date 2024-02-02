@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TimelineModule } from 'primeng/timeline';
 import { AppContentComponent } from './components/app-content/app-content.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     TimelineModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot() // Adicionado para o modal
+      
   ],
   providers: [],
   bootstrap: [AppComponent]

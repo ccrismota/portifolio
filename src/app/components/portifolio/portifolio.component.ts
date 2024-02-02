@@ -1,33 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-portifolio',
   templateUrl: './portifolio.component.html',
   styleUrls: ['./portifolio.component.sass']
-})
+}) 
+
 export class PortifolioComponent implements OnInit {
 
-  constructor() { }
-
+  modalRef?: BsModalRef | null;
+  // modalRef2?: BsModalRef;
+  constructor(private modalService: BsModalService) {}
  
-
-  openModal() {
-    const modal = document.getElementById('myModal');    
-    if(modal != null) {
-      modal.style.display = 'block';
-    }
-  }
-
-  closeModal() {
-    const modal = document.getElementById('myModal');    
-    if(modal != null) {
-      modal.style.display = 'none';
-    }
+  openModal(template: TemplateRef<void>) {
+    this.modalRef = this.modalService.show(template, { id: 1, class: 'modal-xl modal-dialog-centered' });
   }
 
 
-
+  
   ngOnInit(): void {
+ 
   }
 
 }

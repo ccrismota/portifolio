@@ -1,4 +1,3 @@
-
 .limite-superior
   position: absolute
   display: flex
@@ -9,6 +8,7 @@
 
 .title-navbar
   position: absolute
+  color: var(--text-color)
   font-size: 25px
   margin: -5px 0 0 25px
   padding: 0
@@ -25,23 +25,27 @@
   display: flex
   flex-direction: column
   align-items: flex-start
-  justify-content: start
+  justify-content: flex-start
   border-radius: 7px
   line-height: 1.8
   p
-    margin: 15px 25px 0 25px
+    margin: 15px 0 0 25px
     top: 80px
     text-align: justify
 
   section:nth-child(1)
-    margin-top: 3.3%
+    margin-top: 5%
+
+.container 
+  color: var(--text-color)
+  display: flex
 
 .d-flex-2
   display: flex
   flex-direction: row
-  align-items: center
+  align-items: flex-start
+  justify-content: space-between
   flex-wrap: wrap
-  justify-content: start
   margin: 0
 
 .html, .javascript, .css, .angular, .java,
@@ -62,7 +66,8 @@
   font-size: 12px
   color: var(--text-color)
   p
-    margin-top: -2px
+    margin: 0
+    text-align: center
 
 .vscode:hover, .html:hover, .javascript:hover, .css:hover, .angular:hover,
 .java:hover, .linguageC:hover, .mysql:hover, .react:hover, .node:hover,
@@ -86,14 +91,15 @@
 
 //projetos
 
+
 .card
   display: flex
   flex-direction: column
   align-items: center
   justify-content: center
-  margin: 20px 43px
+  margin: 35px 25px 25px 45px
   &:hover
-    transform: scale(1.2)
+    transform: scale(1.1)
     transition: all 0.5s ease-in-out
     background-color: none
     .card-body::after
@@ -103,7 +109,7 @@
       display: none
 
 .card-body
-  height: 101px
+  height: 212px
   border: 1px solid var(--text-color-second)
   color: var(--text-color)
   border-radius: 3px 3px 0 0
@@ -114,43 +120,41 @@
     opacity: 90%
     content: ''
     background-color: var(--bg-project)
-    font-weight: bold
     width: 100%
-    height: 100.5%
-    margin: -146.5px 0 0 0
+    height: 101%
+    margin: -261.5px 0 0 0
       
 
 .card-body p
   position: relative
   color: #fff
-  font-weight: bold
+  font-weight: bold  
+  font-size: 20px
   z-index: 999
-  top: -80px
-  left: 15px
-
+  top: -140px
+  left: 100px
 
 .card-footer
   display: flex
   flex-direction: row
   align-items: center
   width: 100%
-  height: 30px
+  height: 40px
   justify-content: space-between
-  border: 1px solid var(--text-color-second)
+  border-bottom: 1px solid var(--text-color-second)
+  border-left: 1px solid var(--text-color-second)
+  border-right: 1px solid var(--text-color-second)
   background-color: var(--bg-vermais)
   border-radius: 0 0 7px 7px
   padding: 0 5px
-  font-size: 10px
-
-  h5
-    padding: 0 7px 0 0
+  font-size: 12px
 
   span
     text-decoration: none
     font-weight: bold
     width: 60px
     border-radius: 5px
-    padding: 2px 5px
+    padding: 2px 0
     color: var(--icon-color)
     transition: 0.5s ease-in-out
     &:hover

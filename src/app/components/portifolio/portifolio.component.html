@@ -4,10 +4,10 @@
     <div class="line"></div>
   </div>
   <div class="portifolio">
-    <section class="container d-flex">
+    <section class="container row d-flex">
       <p>Tecnologias mais utilizadas nos projetos pessoais e maior contato</p>
 
-      <div class="d-flex-2 col">
+      <div class="d-flex-2">
 
         <div class="vscode col">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" height="50" width="70">
@@ -243,7 +243,7 @@
 
       <p>Tecnologias com as quais já tive contato</p>
 
-      <div class="d-flex-2 col">
+      <div class="d-flex-2">
 
         <div class="intellij col">
           <img src="assets/img/IntelliJ.png" alt="IntelliJ" height="50" width="50">
@@ -404,36 +404,35 @@
     </section>
 
     <p>Projetos</p>
-
+    <!-- <a href="https://ccrismota.github.io/site-chale/">Ver mais</a> -->
     <section class="d-flex-2">
-
       <div class="card col">
         <div class="card-body">
-          <img src="assets/img/chale.png" alt="Página inicial do projeto" style="width: 180px; height: 100px;">
+          <img src="assets/img/chale.png" alt="Página inicial do projeto" style="width: 360px; height: 210px;">
           <p>Chalé Hotel</p>
         </div>
         <div class="card-footer">
           <h5>07 novembro 2021</h5>
-          <span type="button" (click)="openModal()" data-toggle="modal" data-target="#myModal">Ver mais</span>
-          <!-- <a href="https://ccrismota.github.io/site-chale/">Ver mais</a> -->
+          <span type="button" (click)="openModal(template)" >Ver mais</span>
         </div>
       </div>
     </section>
   </div>
+
+  <ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">First modal</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      This is a first modal<br />
+      <button type="button" class="btn btn-primary">Open second modal</button>
+      <button type="button" class="btn btn-primary">Close self</button>
+      <button type="button" class="btn btn-primary">Close all modal</button>
+    </div>
+  </ng-template>
 </div>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" (click)="closeModal()">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      
-    </div>
-  </div>
-</div>
+
