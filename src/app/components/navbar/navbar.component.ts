@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ETheme } from 'src/app/enums/ETheme.enum';
 
@@ -9,9 +9,11 @@ import { ETheme } from 'src/app/enums/ETheme.enum';
 })
 export class NavbarComponent implements OnInit {
 
+  @Input() marginTopBodyNavbar?: string;
+
   icon: string = ETheme.DARK_MODE_ICON;
   theme: string = ETheme.LIGHT;
-
+  
   constructor(private router: Router) { }
 
   redirecionarParaRota(rota: string): void {
@@ -39,6 +41,7 @@ export class NavbarComponent implements OnInit {
     }
 
   }
+
 
   ngOnInit(): void {
     this.changeIcon();

@@ -34,19 +34,21 @@ $small: 275px
 $medium: 850px
 
 @media screen and (min-width: $small) and (max-width: $medium)
-  .guide-tilte
-    display: flex
+
+  .body-navbar
+    position: absolute
     justify-content: space-around
-    border: none
-    margin: 0
-    padding: 7px 0
+    margin-left: -100.5%
+  
+  .guide-title    
+    border-radius: 5px 
+    width: 99.5%
     a
       padding: 0
       margin: 2px 20px 0 5px
       font-size: 14px
+
   .theme-mode
     padding-top: 4px
     font-size: 15px
 
-  .body-navbar
-    display: none

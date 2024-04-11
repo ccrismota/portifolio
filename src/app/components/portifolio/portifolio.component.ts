@@ -10,7 +10,6 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 export class PortifolioComponent implements OnInit {
 
   modalRef?: BsModalRef | null;
-  // modalRef2?: BsModalRef;
   constructor(private modalService: BsModalService) {}
  
   openModal(template: TemplateRef<void>) {

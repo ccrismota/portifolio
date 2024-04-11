@@ -12,9 +12,10 @@
   padding: 7px 0 0 0
   margin: 2px
 
+
 .header-img
   width: 150px
-  height: 150px
+  height: 150px  
   border-radius: 50%
   object-fit: cover
 
@@ -23,21 +24,24 @@
   flex-direction: column
   justify-content: right
   
-
 .header-img-border
   display: flex
   justify-content: center
   align-items: center
   border-radius: 50%
+  margin-left: 23px
   border: 1px solid var(--line-color)
   height: 180px
   width: 180px
 
-.header-name
+.header-name  
+  color: var(--text-color)
   display: flex
+  justify-content: center
   flex-direction: column
   align-items: center
-  h3
+  width: 100%
+  h5
     margin: 0
     font-weight: 500
   p
@@ -80,7 +84,7 @@
 
 .header-social-media
   display: flex
-  margin: -5px 0 0 0
+  margin: 25px 0 0 0
   li
     list-style-type: none
     float: left
@@ -119,15 +123,20 @@
 .header-list
   display: none
 
-.header-contac
-  .header-contact-main
-    display: none
+.header-contact-hidden
+  display: none
 
-$medium: 850px
 $small: 275px
+$medium: 850px
 
 @media screen and (min-width: $small) and (max-width: $medium)
+  
   .header
+    width: 100%
+    height: 162px
+    background-color: var(--bg-color)
+  
+  .header-mobile
     display: flex
     flex-direction: row
     justify-content: space-around
@@ -137,22 +146,21 @@ $small: 275px
     background-color: var(--bg-color)
     border-radius: 7px
 
-  .header-name 
-    display: flex
-    flex-direction: column
-    padding: 0
-    margin-left: -30px
-    font-size: 12px
-
-
+  .header-name
+    h5
+      font-size: 16px
+      font-weight: 500
+      padding-bottom: 5px
+    p
+      font-size: 12px
+   
   .header-with-list
     display: flex
     flex-direction: row
-    align-items: flex-start
-    background-color: var(--bg-color)
-    height: 400px
+    justify-content: space-around    
+    height: 200px
     border-radius: 7px
-
+  
   .header-img
     display: flex
     width: 100px
@@ -165,11 +173,11 @@ $small: 275px
     justify-content: center
     align-items: center
     background-color: var(--bg-color)
+    margin: 7px
     width: 125px
     height: 125px
     border-radius: 50%
     padding: 10px
-
 
   .header-profession
     font-size: 10px
@@ -186,61 +194,62 @@ $small: 275px
     margin: -60px 0 0 0
     
   .header-contact
-    border-top: 1px solid var(--line-color)
-    border-bottom: 1px solid var(--line-color)
-    padding: 5px 0
-    width: 280px
-    margin: 340px 0 0 -750px
-    border: 1px solid red
-    ul
-      ppadding: 0
+    border-top: 1px solid var(--line-color)    
+    margin: -10px 0 0 5px
+    width: 300px
     li
-      margin: 0 0 5px -20px
-      padding: 0
-      width: 150px
-      p
-        padding: 0
-        margin: 0 0 -8px 0
+      margin: 0
+      width: 100%
       a
         font-size: 12px
-        margin: 0
       span
-        font-size: 20px
-        padding: 4px
+        border: none
+
+  .header-contact-hidden
+    border-top: 1px solid var(--line-color)    
+    margin: -10px 0 0 5px
+    width: 300px
+    li
+      margin: 0
+      width: 100%
+      a
+        font-size: 12px
+      span
+        border: none
+    
 
   .header-social-media
+    border-top: 1px solid var(--line-color)      
+    margin: -7px 0 0 0
+    ul
+      display: flex
+      justify-content: space-between
+      width: 100%  
+      li
+        i
+          font-size: 20px
+          padding-top: 7px    
+      
+  .container-fluid
     position: absolute
-    padding: 25px 0 0 0
-    img
-      border: none
-    #linkedin
-      margin-left: 0
-    li
-      list-style-type: none
-      width: 40px
-      margin: 0 0 0 -55px
-      float: left
-      a
-        text-decoration: none
-        padding: 0
-
-  .container
+    // top: 167px
     width: 100%
+    margin-left: -100%
     border: 1px solid var(--line-color)
     border-radius: 7px
     margin-bottom: 7px
+    // border: 1px solid red
 
-  .nav-bar
-    float: left
-    display: flex
-    justify-content: space-around
-    width: 100%
-    border: 1px solid var(--line-color)
-    background-color: var(--bg-color)
-    border-radius: 7px
-    margin: 7px 0
-
-  .header-contact-main-media
-    display: none
-  .header-contact-main
-    display: none
+    // .nav-bar
+    // float: left
+    // display: flex
+    // justify-content: space-around
+    // width: 100%
+    // border: 1px solid var(--line-color)
+    // background-color: var(--bg-color)
+    // border-radius: 7px
+    // margin: 7px 0
+  
+  
+  
+ 

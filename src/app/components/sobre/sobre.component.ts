@@ -7,11 +7,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SobreComponent implements OnInit {
 
-  @Output() newItemEvent = new EventEmitter<string>();
+  // @Output() newItemEvent = new EventEmitter<string>();
 
-  addNewItem(value: string) {
-    this.newItemEvent.emit(value);
-  }
+  // addNewItem(value: string) {
+  //   this.newItemEvent.emit(value);
+  // }
 
 
 

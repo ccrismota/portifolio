@@ -31,7 +31,7 @@
   display: flex
   flex-direction: column
   align-items: flex-start
-  justify-content: start
+  justify-content: flex-start
   color: var(--text-color)
   border-radius: 7px
   line-height: 1.8
@@ -44,3 +44,22 @@
     margin-top: 7%
 
 
+$small: 275px
+$medium: 850px
+
+@media screen and (min-width: $small) and (max-width: $medium)
+  
+  .limite-superior
+    margin: 50px 0 0 25px
+    height: 25px
+    width: calc( 100% - 75px )
+
+  .line
+    margin: -7px 0 0 2px
+  
+  .sobre
+   p:nth-child(1)
+    margin-top: 20%
+
+   p:nth-child(4)
+    margin-bottom: 5%

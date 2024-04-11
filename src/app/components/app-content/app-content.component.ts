@@ -1,27 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit, Output} from '@angular/core';
+
 
 @Component({
   selector: 'app-app-content',
   templateUrl: './app-content.component.html',
   styleUrls: ['./app-content.component.sass']
 })
-export class AppContentComponent {
+export class AppContentComponent implements OnInit {
 
- 
-  showList: boolean = false;
-  alterarClasseMenu: string = 'header';
+  showX: boolean = false;
+  alturaHeader = '162px';
+  topContainerFluid = '167px';
+  showBotao: boolean = false;
+
+  @Output() marginTopBodyNavbar = '165px';
+  
   constructor() { }
-
-
-  clickMenu() {
-    this.showList = !this.showList;
-    if (this.showList){
-      this.alterarClasseMenu = 'header-with-list'
+  
+  exibirMenu() {
+    this.showX = !this.showX;
+    this.showBotao = !this.showBotao;
+    if (this.showX) {
+      this.showBotao = true;
+      this.alturaHeader = '362px';
+      this.topContainerFluid = '405px';
+      this.marginTopBodyNavbar = '365px';
+    } else {
+      this.alturaHeader = '162px';
+      this.topContainerFluid = '205px';
+      this.marginTopBodyNavbar= '165px';
     }
-    else
-      this.alterarClasseMenu = 'header'
   }
 
-
-
+ 
+  ngOnInit(): void {
+    if(window.innerWidth < 768) {
+      this.alturaHeader = '162px';
+    } else {
+      this.alturaHeader = '100vh';
+      this.showX = true;
+    }
+  }
 }
