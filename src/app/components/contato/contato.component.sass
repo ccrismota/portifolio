@@ -23,16 +23,13 @@
 		margin: 25px 25px 0 25px
 		top: 80px
 		text-align: justify
-a
-	transition: .3s all ease
-	color: var(--text-color)
-	&:hover, &:focus
-		text-decoration: none
-		outline: none
-		box-shadow: none
-
-
-
+	a
+		transition: .3s all ease
+		color: var(--text-color)
+		&:hover, &:focus
+			text-decoration: none
+			outline: none
+			box-shadow: none
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5
@@ -77,13 +74,13 @@ h1, h2, h3, h4, h5,
 
 	&::-moz-placeholder
 		color: var(--text-color-second)
-	  	
+
 	&:-ms-input-placeholder
 		color: var(--text-color-second)
-	  	
+
 	&:-moz-placeholder
 		color: var(--text-color-second)
-	  	
+
 	&:focus, &:active
 		background: transparent
 		border-color: var(--text-color-second)
@@ -93,7 +90,6 @@ textarea.form-control
 
 #name:focus, #email:focus, #subject:focus, #message:focus
 	box-shadow: none
-
 
 .contact-space
 	background-color: var(--bg2-color)
@@ -125,7 +121,6 @@ textarea.form-control
 			background: var(--bg-color)
 			color: var(--icon-color)
 			border: 1px solid var(--icon-color)
-
 
 .contactForm
 	.form-control
@@ -163,3 +158,28 @@ textarea.form-control
 	display: none
 	font-size: 16px
 	font-weight: 500
+
+$small: 275px
+$medium: 850px
+
+@media screen and (min-width: $small) and (max-width: $medium)
+
+	.line
+		margin: 45px 0 0 28px
+
+	.sobre
+		p:nth-child(1)
+			margin-top: 20%
+
+	.container-fluid
+		border: 1px solid red
+		height: 200%
+
+	.container-fluid > .align-items-stretch
+		flex-direction: column
+		display: flex
+
+	.contact-space
+		margin-top: 30px !important
+
+	

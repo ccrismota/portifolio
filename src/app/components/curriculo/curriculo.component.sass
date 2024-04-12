@@ -82,8 +82,7 @@
         background-color: var(--icon-color)
         border-radius: 50%
     h4
-      float: left
-      margin: 0 0 -5px 23px
+      margin: 0 0 -5px 49px
       font-size: 15px
 
   .timeline-body
@@ -113,14 +112,65 @@
       font-size: 20px
       color: var(--icon-color)
 
-  .line-timeline-1, .line-timeline-2, .line-timeline-3, 
-  .line-timeline-4, .line-timeline-5, .line-timeline-6, 
-  .line-timeline-7, .line-timeline-8, .line-timeline-9, 
-  .line-timeline-10
+  .line-timeline,
+  .line-timeline-1, 
+  .line-timeline-2, 
+  .line-timeline-3,
+  .line-timeline-4,
+  .line-timeline-5
     clear: both
     border-left: 1px solid var(--line-color)
     height: 100%
     margin: 0 0 0 15px
 
-  .line-timeline-10
+  .line-timeline-1
     border: none
+
+$small: 275px
+$medium: 850px
+$large: 1060px
+
+@media screen and (min-width: $small) and (max-width: $large)
+  .limite-superior
+    height: 20px
+  
+
+@media screen and (min-width: $small) and (max-width: $medium)
+  
+  .limite-superior
+    margin: 50px 0 0 25px
+    height: 15px
+    width: calc( 100% - 5px )
+  
+  .title-navbar
+    margin: -5px 0 0 10px
+
+  .line
+    margin: -7px 0 0 -14px
+  
+  .curriculo    
+    p:nth-child(1)
+      margin-top: 30%
+    p:nth-child(4)
+      margin-bottom: 5%
+    .container-fluid
+      position: absolute 
+      margin: 0 5px 0 -5px  
+      width: 95%
+    section:nth-child(1)
+      margin-top: -10px
+  
+    .line-timeline-2
+      margin-top: -50px
+      padding: 15px 0 0 0
+    
+    .line-timeline-3, 
+    .line-timeline-4   
+      margin: -17px 0 0 15px
+      padding: 15px 0 0 0
+    
+    .line-timeline-5   
+      margin: -17px 0 0 15px
+      padding: 7px 0 0 0
+    
+    

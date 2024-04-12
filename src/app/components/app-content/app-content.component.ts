@@ -36,6 +36,7 @@ export class AppContentComponent implements OnInit {
   ngOnInit(): void {
     if(window.innerWidth < 768) {
       this.alturaHeader = '162px';
+      this.topContainerFluid = '205px';
     } else {
       this.alturaHeader = '100vh';
       this.showX = true;
