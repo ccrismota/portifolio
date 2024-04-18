@@ -426,21 +426,23 @@
 
   <ng-template #template>
     <div class="modal-header">
-      <h4 class="modal-title pull-left">Nome Projeto</h4>
-      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      <h4 class="modal-title float-end">Nome Projeto</h4>
+      <button type="button" class="btn-close close float-end" aria-label="Close" (click)="modalRef?.hide()">
+        <!-- <span aria-hidden="true" class="visually-hidden">&times;</span> -->
+        <i aria-hidden="true" class="pi pi-times"></i>
       </button>
+
     </div>
     <div class="modal-body">
       <br />
-      <div class="videoEdescricao">
-        <div class="video">
-          <iframe allow="fullscreen"
-            allowfullscreen height="100%" src="https://streamable.com/e/de5aqh?" width="100%"
-            style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;">
+      <div class="videoEdescricao row">
+        <div class="video col-md-6  col-sm-12">
+          <iframe allow="fullscreen;autoplay" allowfullscreen height="100%"
+            src="https://streamable.com/e/de5aqh?autoplay=1&muted=1" width="100%"
+            style="border:none; width:100%; height:100%; left:0px; top:0px; overflow:hidden; padding-bottom: 20px;">
           </iframe>
         </div>
-        <div class="descricao">
+        <div class="descricao col-md-6 col-sm-12">
           <p>
             The Movie Guide é uma aplicação que reúne informações sobre artistas e produções, permitindo que usuários
             pesquisem e avaliem seus filmes favoritos, além de personalizar seu próprio perfil.
@@ -466,8 +468,10 @@
           </p>
         </div>
       </div>
-      <button type="button" class="btn btn-projeto">Acessar projeto</button>
-      <button type="button" class="btn btn-repositorio">Acessar repositório</button>
+      <div class="botoes">
+        <button type="button" class="btn btn-projeto">Acessar projeto</button>
+        <button type="button" class="btn btn-repositorio">Acessar repositório</button>
+      </div>
     </div>
   </ng-template>
   <!-- style="position:relative; width:100%; height:0px; padding-bottom:56.294%"
