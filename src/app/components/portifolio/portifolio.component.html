@@ -5,7 +5,7 @@
   </div>
   <div class="portifolio">
     <section class="container row d-flex">
-      <p>Tecnologias mais utilizadas nos projetos pessoais e maior contato</p>
+      <p>Tecnologias utilizadas nos projetos</p>
 
       <div class="d-flex-2">
 
@@ -239,12 +239,6 @@
           <p>Trelo</p>
         </div>
 
-      </div>
-
-      <p>Tecnologias com as quais já tive contato</p>
-
-      <div class="d-flex-2">
-
         <div class="intellij col">
           <img src="assets/img/IntelliJ.png" alt="IntelliJ" height="50" width="50">
           <p>IntelliJ</p>
@@ -398,41 +392,85 @@
           </svg>
           <p>C</p>
         </div>
-
       </div>
 
     </section>
-
-    <p>Projetos</p>
+    <div class="titulo-projetos">
+      <p>Projetos</p>
+    </div>
     <!-- <a href="https://ccrismota.github.io/site-chale/">Ver mais</a> -->
-    <section class="d-flex-2">
+    <section class="projetos">
       <div class="card col">
         <div class="card-body">
-          <img src="assets/img/chale.png" alt="Página inicial do projeto" style="width: 360px; height: 210px;">
+          <img src="assets/img/chale.png" alt="Página inicial do projeto">
           <p>Chalé Hotel</p>
         </div>
         <div class="card-footer">
-          <h5>07 novembro 2021</h5>
-          <span type="button" (click)="openModal(template)" >Ver mais</span>
+          <p>07 novembro 2021</p>
+          <span type="button" (click)="openModal(template)">Ver mais</span>
         </div>
       </div>
+      <div class="card col">
+        <div class="card-body">
+          <img src="assets/img/chale.png" alt="Página inicial do projeto">
+          <p>Chalé Hotel</p>
+        </div>
+        <div class="card-footer">
+          <p>07 novembro 2021</p>
+          <span type="button" (click)="openModal(template)">Ver mais</span>
+        </div>
+      </div>
+
     </section>
   </div>
 
   <ng-template #template>
     <div class="modal-header">
-      <h4 class="modal-title pull-left">First modal</h4>
+      <h4 class="modal-title pull-left">Nome Projeto</h4>
       <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
         <span aria-hidden="true" class="visually-hidden">&times;</span>
       </button>
     </div>
     <div class="modal-body">
-      This is a first modal<br />
-      <button type="button" class="btn btn-primary">Open second modal</button>
-      <button type="button" class="btn btn-primary">Close self</button>
-      <button type="button" class="btn btn-primary">Close all modal</button>
+      <br />
+      <div class="videoEdescricao">
+        <div class="video">
+          <iframe allow="fullscreen"
+            allowfullscreen height="100%" src="https://streamable.com/e/de5aqh?" width="100%"
+            style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;">
+          </iframe>
+        </div>
+        <div class="descricao">
+          <p>
+            The Movie Guide é uma aplicação que reúne informações sobre artistas e produções, permitindo que usuários
+            pesquisem e avaliem seus filmes favoritos, além de personalizar seu próprio perfil.
+
+            Tive muita inspiração de sites como Letterboxd e Filmow, dos quais sou usuário assíduo há anos. Mas a ideia
+            surgiu mesmo do Desafio Front-End da Promobit localizado no repositório do Felipe Fialho, onde cumpri os
+            requisitos apontados e fui além criando novas features, como:
+
+            • Realizar upload de Imagens;
+            • Avaliar e catalogar filmes favoritos/já assistidos;
+            • Barra de pesquisa que busca por títulos e artistas simultaneamente;
+            • Animações com a biblioteca Framer Motion;
+            • Rotas dinâmicas com React Router Dom;
+            • Filtro acumulativo de gêneros;
+
+            No desenvolvimento decidi utilizar o Vite.js como Build Tool pelo desempenho, Redux pro gerenciamento e
+            armazenamento de Estados Globais, Styled Components pelos diversos benefícios do CSS-in-JS, TypeScript por
+            facilitar na hora de fazer depuração no código e o React Router Dom pra manipulação de rotas;
+
+            Foram longas horas de desenvolvimento, e sinto que esse projeto serviu pra consolidar tudo que aprendi
+            nesses
+            últimos meses estudando React.js :
+          </p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-projeto">Acessar projeto</button>
+      <button type="button" class="btn btn-repositorio">Acessar repositório</button>
     </div>
   </ng-template>
+  <!-- style="position:relative; width:100%; height:0px; padding-bottom:56.294%"
+   -->
+
 </div>
-
-

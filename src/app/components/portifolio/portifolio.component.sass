@@ -29,7 +29,7 @@
   border-radius: 7px
   line-height: 1.8
   p
-    margin: 15px 0 0 25px
+    margin: 15px 0 0 15px
     top: 80px
     text-align: justify
 
@@ -37,16 +37,18 @@
     margin-top: 5%
 
 .container 
-  color: var(--text-color)
   display: flex
+  color: var(--text-color)
 
-.d-flex-2
+.d-flex-2, .projetos
   display: flex
   flex-direction: row
   align-items: flex-start
   justify-content: space-between
   flex-wrap: wrap
-  margin: 0
+  margin: 0 0 20px 0
+  
+
 
 .html, .javascript, .css, .angular, .java,
 .linguageC, .mysql, .react, .node, .typescript,
@@ -91,6 +93,20 @@
 
 //projetos
 
+.titulo-projetos
+  display: flex
+  width: 100%
+  margin: 0 0 0 25px
+  color: var(--text-color)
+  p
+    margin: 0
+
+.projetos
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
 
 .card
   display: flex
@@ -109,11 +125,12 @@
       display: none
 
 .card-body
+  width: 100%
   height: 212px
+  padding: 0
   border: 1px solid var(--text-color-second)
   color: var(--text-color)
   border-radius: 3px 3px 0 0
-
   &::after
     display: block
     text-align: center
@@ -122,17 +139,25 @@
     background-color: var(--bg-project)
     width: 100%
     height: 101%
-    margin: -261.5px 0 0 0
-      
+    border-radius: 7px 7px 0 0
+    margin: -256px 0 0 0
+
+.card-body img  
+  border-radius: 7px 7px 0 0
+  width: 100%
+  height: 100%
 
 .card-body p
   position: relative
+  justify-content: center
   color: #fff
   font-weight: bold  
   font-size: 20px
   z-index: 999
-  top: -140px
-  left: 100px
+  top: -130px
+  left: 30%
+  right: 30%
+  
 
 .card-footer
   display: flex
@@ -141,13 +166,13 @@
   width: 100%
   height: 40px
   justify-content: space-between
-  border-bottom: 1px solid var(--text-color-second)
-  border-left: 1px solid var(--text-color-second)
-  border-right: 1px solid var(--text-color-second)
   background-color: var(--bg-vermais)
+  color: var(--text-color)
   border-radius: 0 0 7px 7px
   padding: 0 5px
   font-size: 12px
+  p 
+    margin: -4px 0 0 7px
 
   span
     text-decoration: none
@@ -163,4 +188,92 @@
       transition: 0.3s ease-in-out
       cursor: pointer
 
+.modal-header
+  background-color: var(--bg-color)
+  color: var(--text-color)
+  border-bottom: 1px solid var(--line-color)
 
+.modal-body
+  background-color: var(--bg-color)
+  color: var(--text-color)
+  text-align: justify
+  padding: 0 16px 16px 16px
+  p
+    font-size: 12px
+    margin: -12px 0 10px 0
+  .btn-repositorio
+    margin-left: 15px
+  button
+    background-color: var(--icon-color)
+    border: 1px solid var(--line-color)
+    color: var(--bg-color)
+    &:hover,&:focus
+      background: var(--bg-color)
+      color: var(--icon-color)
+      border: 1px solid var(--icon-color)
+
+
+
+
+
+@media screen and (min-width: 851px) and (max-width: 1060px)
+  
+  .limite-superior
+    height: 10px
+
+  .projetos
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    
+  .card
+    width: 100%
+
+
+@media screen and (min-width: 275px) and (max-width: 850px)
+  
+  .limite-superior
+    margin: 50px 0 0 25px
+    height: 15px
+    width: calc( 100% - 75px )
+
+  .line
+    margin: -7px 0 0 2px
+  
+  .portifolio
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 
+    padding: 0
+    p:nth-child(4)
+      margin-bottom: 5%
+    p
+      margin: 0 0 0 12px
+    section:nth-child(1)
+      margin-top: 17%
+
+  .d-flex-2   
+    padding: 0
+    margin: 0 0 20px 0
+
+  .projetos
+    width: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  .card
+    width: 100%
+    margin: 25px 20px 25px 20px 
+      
+  .card-body
+    width: 100%
+    &::after
+      margin: -240px 0 0 0
+      width: 100%
+
+  .card-body img
+    width: 100%
+
+    
