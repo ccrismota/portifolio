@@ -9,6 +9,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 export class PortifolioComponent implements OnInit {
 
+
   modalRef?: BsModalRef | null;
   constructor(private modalService: BsModalService) {}
  
@@ -19,7 +20,7 @@ export class PortifolioComponent implements OnInit {
 
   
   ngOnInit(): void {
- 
+   
   }
 
 }
