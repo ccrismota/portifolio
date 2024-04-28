@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
 
   icon: string = ETheme.DARK_MODE_ICON;
   theme: string = ETheme.LIGHT;
-  
+
   constructor(private router: Router) { }
 
   redirecionarParaRota(rota: string): void {
@@ -39,7 +39,6 @@ export class NavbarComponent implements OnInit {
       this.theme = ETheme.LIGHT;
       this.icon = ETheme.DARK_MODE_ICON;
     }
-
   }
 
 
