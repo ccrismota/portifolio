@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { Observable } from 'rxjs';
 import { Projeto } from 'src/app/enums/Projeto';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,11 +12,16 @@ export class PortfolioComponent implements OnInit {
 
   modalRef?: BsModalRef | null;
   selectedProjeto?: Projeto | null;
+  safeUrl?: SafeResourceUrl;
 
-  constructor(private modalService: BsModalService) { }
+  constructor(
+    private modalService: BsModalService,
+    private sanitizer: DomSanitizer
+  ) { }
 
   openModal(template: TemplateRef<any>, projeto: Projeto) {
     this.selectedProjeto = projeto;
+    this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(projeto.link);
     this.modalRef = this.modalService.show(template, { class: 'modal-xl modal-dialog-centered' });
   }
 
@@ -41,7 +46,7 @@ export class PortfolioComponent implements OnInit {
        consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
        pulvinar dapibus leo.Site de um hotel fictício, com um design moderno e 
        responsivo, feito com HTML, CSS e JavaScript.`,
-      link: 'de5aqh',
+      link: 'https://streamable.com/e/de5aqh?autoplay=1&muted=1',
     },
     {
       id: 2,
@@ -59,7 +64,7 @@ export class PortfolioComponent implements OnInit {
        responsivo, feito com HTML, CSS e JavaScript. lorem ipsum dolor sit amet,
        consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
        pulvinar dapibus leo.`,
-      link: '9s5qbp',
+      link: 'https://streamable.com/e/9s5qbp?autoplay=1&muted=1',
     },
   ];
 
@@ -68,5 +73,4 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
 }
