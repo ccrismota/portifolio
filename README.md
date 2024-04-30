@@ -1,27 +1,31 @@
-# Portifolio
+# Portfólio Pessoal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+<a href="https://imgur.com/9MSRZ3i"><img src="https://i.imgur.com/9MSRZ3i.png" title="source: imgur.com" /></a>
 
-## Development server
+Você pode acessá-lo com este [link.](https://por7folio.netlify.app)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
+## **💻 Sobre**
 
-## Code scaffolding
+O meu portfólio tráz informações sobre mim e os projetos que desenvolvi, além daqueles que colaborei com alguma implimentação.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Alguns features existentes são:
 
-## Build
+- Light & Dark Mode;
+- Responsividade para todos dispositivos;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Você pode acessá-lo com este [link.](https://por7folio.netlify.app)
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## **🚀 Tecnologias**
 
-## Running end-to-end tests
+Esse projeto foi desenvolvido com as seguintes ferramentas:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- HTML5
+- Angular
+- Typescript
+- Compilador SASS
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+--- 

@@ -6,4 +6,6 @@ export interface Projeto  {
     details: string;
     description: string;
     link: string;
+    link_repo: string;
+    link_proj: string;
 }

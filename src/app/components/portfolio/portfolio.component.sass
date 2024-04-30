@@ -104,7 +104,7 @@
   display: flex
   flex-direction: row
   align-items: center
-  justify-content: center
+  justify-content: flex-start
   flex-wrap: wrap
 
 .card
@@ -154,6 +154,7 @@
   font-weight: bold  
   font-size: 20px
   z-index: 999
+  width: 150px
   top: -130px
   left: 30%
   right: 30%
@@ -214,7 +215,7 @@
   width: 100%
   p
     font-size: 14px
-    margin: -35px 10px 10px 0
+    margin: -35px 35px 10px 0
   .btn-repositorio
     margin-left: 15px
   .btn-projeto
@@ -227,6 +228,12 @@
       background: var(--bg-color)
       color: var(--icon-color)
       border: 1px solid var(--icon-color)
+    a
+      text-decoration: none
+      color: var(--bg-color)
+      &:hover,&:focus
+        background: var(--bg-color)
+        color: var(--icon-color)
 
 .video
   display: flex
@@ -238,6 +245,7 @@
   display: flex
   flex-direction: row
   margin: 12px 0 0 30px
+ 
 
 @media screen and (max-width: 1200px)
   
@@ -252,7 +260,8 @@
 
   .descricao  
     p
-      margin: -15px 0 15px 0
+      margin: -15px 15px 15px 0
+      
 
   .video
    display: none
@@ -267,7 +276,7 @@
     height: 50px
 
 @media screen and (min-width: 275px) and (max-width: 850px)
-  
+
   .limite-superior
     margin: 50px 0 0 25px
     height: 15px
@@ -280,14 +289,12 @@
     display: flex
     align-items: center
     justify-content: center
-    margin: 0 
-    padding: 0
     p:nth-child(4)
       margin-bottom: 5%
     p
       margin: 0 0 0 12px
     section:nth-child(1)
-      margin-top: 17%
+      margin-top: 60px
 
   .d-flex-2   
     padding: 0
@@ -300,18 +307,18 @@
     justify-content: center
 
   .card
-    width: 100%
     margin: 25px 20px 25px 20px 
-      
-  .card-body
+   
+
+  .card-body      
     width: 100%    
     &::after
       margin: -240px 0 0 0
-      width: 100%
     p
       margin: 0
       top: -120px
-      left: 37.5%
+      left: 35%
+      width: 150px
 
   .card-body img
     width: 100%

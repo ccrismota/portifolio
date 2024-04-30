@@ -451,9 +451,9 @@
         </div>
         <!-- <a href="https://ccrismota.github.io/site-chale/">Ver mais</a> -->
         <section class="projetos">
-            <div class="card col" *ngFor="let projeto of projetos">
+            <div class="card" *ngFor="let projeto of projetos">
                 <div class="card-body">
-                    <img src={{projeto.image}} alt="Página inicial do projeto">
+                    <img [src]="projeto.image" alt="Página inicial do projeto">
                     <p>{{projeto.title}}</p>
                 </div>
                 <div class="card-footer">
@@ -477,9 +477,6 @@
                 <br />
                 <div class="videoEdescricao row">
                     <div class="video col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                        <!-- <iframe allow="fullscreen; autoplay" allowfullscreen height="100%"
-                            [src]="selectedProjeto?.link">
-                        </iframe> -->
                         <iframe allow="fullscreen;autoplay" allowfullscreen height="100%"
                         [src]="safeUrl"
                             width="100%" style="width:100%; height:100%; overflow:hidden;">
@@ -492,8 +489,8 @@
                     </div>
                 </div>
                 <div class="botoes">
-                    <button type="button" class="btn btn-projeto">Acessar projeto</button>
-                    <button type="button" class="btn btn-repositorio">Acessar repositório</button>
+                    <button type="button" class="btn btn-projeto"><a [href]="selectedProjeto?.link_proj">Acessar projeto</a></button>
+                    <button type="button" class="btn btn-repositorio"><a [href]="selectedProjeto?.link_repo">Acessar repositório</a></button>
                 </div>
             </div>
         </div>
