@@ -54,16 +54,15 @@ export class PortfolioComponent implements OnInit {
       title: 'Sistema SGB',
       date: '12 junho 2023',
       details: 'Ver mais',
-      description: `SGB - Sistema de gerenciamento de bancas, com um design moderno e 
-      responsivo, feito com HTML, CSS e JavaScript. lorem ipsum dolor sit amet, 
-      consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
-       pulvinar dapibus leo.Site de um hotel fictício, com um design moderno e 
-       responsivo, feito com HTML, CSS e JavaScript. lorem ipsum dolor sit amet,
-       consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
-       pulvinar dapibus leo.Site de um hotel fictício, com um design moderno e 
-       responsivo, feito com HTML, CSS e JavaScript. lorem ipsum dolor sit amet,
-       consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
-       pulvinar dapibus leo.`,
+      description: `Inicialmente, o Sistema de Gerenciamento de Bancas (SGB)
+      passou por um minucioso levantamento de requisitos, com o objetivo de 
+      automatizar o cadastro de alunos, professores e trabalhos, visando eliminar
+       processos manuais e reduzir potenciais erros. O sistema foi projetado 
+       adotando uma arquitetura baseada em micro serviços, sustentada por 
+       tecnologias modernas, tais como Node, React, Auth0 e PostgreSQL, 
+       evidenciando, assim, uma abordagem técnica robusta. Como decisão 
+       estratégica, optou-se por priorizar funcionalidades cruciais, 
+       concentrando esforços na automação do cadastro e agendamento de bancas.      `,
       link: 'https://streamable.com/e/9s5qbp?autoplay=1&muted=1',
       link_repo: 'https://github.com/ccrismota/portifolio',
       link_proj: 'https://por7folio.netlify.app',
