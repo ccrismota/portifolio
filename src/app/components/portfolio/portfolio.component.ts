@@ -58,7 +58,14 @@ export class PortfolioComponent implements OnInit {
       o framework Angular e a API Rick & Morty para consumo de dados. A aplicação segue um modelo 
       de dashboard, com cabeçalho e menu lateral fixos, além de conteúdo dinâmico. O objetivo 
       principal é proporcionar uma experiência interativa e responsiva para os usuários, permitindo
-      a visualização de informações sobre personagens e episódios da série Rick & Morty..`,
+      a visualização de informações sobre personagens e episódios da série Rick & Morty.
+      Principais funcionalidades:
+      Listagem de Personagens,
+      Listagem de Episódios,
+      Detalhes dos Personagens e Episódios,
+      Barra de Busca Global,
+      Paginação e Scroll Infinito.
+      `,
       link: 'https://streamable.com/e/l4ndir?autoplay=1&muted=1',
       link_repo: 'https://github.com/ccrismota/testeL5',
       link_proj: 'https://workapirm.netlify.app',
