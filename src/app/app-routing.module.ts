@@ -16,8 +16,11 @@ const appRoutes: Routes = [
     { path: 'portifolio', component: PortfolioComponent },
     { path: 'contato', component: ContatoComponent },
     { path: 'curriculo', component: CurriculoComponent },
+    {
+      path: '**', redirectTo: 'sobre', pathMatch: 'full'
+    }
   ]},
-
+  // path: '', redirectTo: 'character', pathMatch: 'full'
 ];
 
 @NgModule({

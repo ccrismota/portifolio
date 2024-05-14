@@ -32,21 +32,36 @@ export class PortfolioComponent implements OnInit {
   }
 
   projetos: Projeto[] = [
+    // {
+    //   id: 1,
+    //   image: 'assets/img/chale.jpg',
+    //   title: 'Chalé Hotel',
+    //   date: '07 novembro 2021',
+    //   details: 'Ver mais',
+    //   description: `O projeto do site do Chalé Hotel representa um marco 
+    //   significativo em meu aprendizado de desenvolvimento web, destacando 
+    //   meus conhecimentos em HTML e CSS. A estrutura semântica e organizada 
+    //   do HTML permitiu a apresentação clara dos serviços do hotel, enquanto
+    //   o CSS trouxe vida ao design. A escolha cuidadosa de cores, 
+    //   fontes e layouts criou uma experiência visualmente atraente e funcional.`,
+    //   link: 'https://streamable.com/e/de5aqh?autoplay=1&muted=1',
+    //   link_repo: 'https://github.com/ccrismota/site-chale',
+    //   link_proj: 'https://ccrismota.github.io/site-chale/',
+    // },
     {
       id: 1,
-      image: 'assets/img/chale.jpg',
-      title: 'Chalé Hotel',
-      date: '07 novembro 2021',
+      image: 'assets/img/R&Mp.png',
+      title: 'Rick and Morty ',
+      date: '14 maio 2024',
       details: 'Ver mais',
-      description: `O projeto do site do Chalé Hotel representa um marco 
-      significativo em meu aprendizado de desenvolvimento web, destacando 
-      meus conhecimentos em HTML e CSS. A estrutura semântica e organizada 
-      do HTML permitiu a apresentação clara dos serviços do hotel, enquanto
-      o CSS trouxe vida ao design. A escolha cuidadosa de cores, 
-      fontes e layouts criou uma experiência visualmente atraente e funcional.`,
-      link: 'https://streamable.com/e/de5aqh?autoplay=1&muted=1',
-      link_repo: 'https://github.com/ccrismota/site-chale',
-      link_proj: 'https://ccrismota.github.io/site-chale/',
+      description: `O projeto desenvolvido é uma Single-Page Application (SPA) criada utilizando 
+      o framework Angular e a API Rick & Morty para consumo de dados. A aplicação segue um modelo 
+      de dashboard, com cabeçalho e menu lateral fixos, além de conteúdo dinâmico. O objetivo 
+      principal é proporcionar uma experiência interativa e responsiva para os usuários, permitindo
+      a visualização de informações sobre personagens e episódios da série Rick & Morty..`,
+      link: 'https://streamable.com/e/l4ndir?autoplay=1&muted=1',
+      link_repo: 'https://github.com/ccrismota/testeL5',
+      link_proj: 'https://workapirm.netlify.app',
     },
     {
       id: 2,
@@ -67,9 +82,7 @@ export class PortfolioComponent implements OnInit {
       link_repo: 'https://github.com/ccrismota/portifolio',
       link_proj: 'https://por7folio.netlify.app',
     },
-
   ];
-
 
 
   ngOnInit(): void {
