@@ -42,7 +42,6 @@ export class ContatoComponent implements OnInit {
     return this.contatoForm.get('message');
   }
   
-  
 
   
  async sendEmail() {

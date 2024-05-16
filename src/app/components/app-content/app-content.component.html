@@ -1,5 +1,5 @@
 <div>
-    <div class="header" [style.height]="alturaHeader">
+    <div class="header" [style.height]="heightHeader">
         <div class="header-mobile">
             <figure>
                 <div class="header-img-border">
@@ -14,11 +14,11 @@
 
             <!-- Mobile(Menu)-->
             <div class="header-list" *ngIf="!showBotao; else close">
-                <span class="material-symbols-outlined" (click)="exibirMenu()">contact_phone</span>
+                <span class="material-symbols-outlined" (click)="updateSize($event)">contact_phone</span>
             </div>
             <ng-template #close>
                 <div class="header-list">
-                    <span class="material-symbols-outlined" (click)="exibirMenu()">close</span>
+                    <span class="material-symbols-outlined" (click)="updateSize($event)">close</span>
                 </div>
             </ng-template>
         </div>

@@ -1,4 +1,6 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Host, HostListener, OnDestroy, OnInit, Output } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
+import { ServiceService } from 'src/app/services/service.service';
 
 
 @Component({
@@ -6,44 +8,60 @@ import { Component, OnInit, Output } from '@angular/core';
   templateUrl: './app-content.component.html',
   styleUrls: ['./app-content.component.sass']
 })
-export class AppContentComponent implements OnInit {
+export class AppContentComponent implements OnInit, OnDestroy {
 
   showX: boolean = false;
-  alturaHeader = '100vh';
+  heightHeader = '100vh';
   topContainerFluid = '167px';
   showBotao: boolean = false;
-  menuContato = '';
+  menuContato: string = 'none';
 
   @Output() marginTopBodyNavbar = '165px';
 
-  constructor() { }
+  private observeSubscription: Subscription;
 
-  exibirMenu() {
-    this.showX = !this.showX;
-    this.showBotao = !this.showBotao;
-    if (this.showX) {
-      this.showBotao = true;
-      this.alturaHeader = '362px';
-      this.topContainerFluid = '405px';
-      this.marginTopBodyNavbar = '365px';
-      this.menuContato = '';
-    } else {
-      this.alturaHeader = '162px';
-      this.topContainerFluid = '205px';
-      this.marginTopBodyNavbar = '165px';
-      this.menuContato = 'none';
-    }
+  constructor(
+    private service: ServiceService
+  ) {
+    this.observeSubscription = this.service.observeMenu$.subscribe((os) => { this.menuContato = os; });
+    this.observeSubscription = this.service.observeHeight$.subscribe((os) => { this.heightHeader = os; });
+  }
+
+  ngOnDestroy(): void {
+    this.observeSubscription.unsubscribe();
   }
 
 
-  ngOnInit(): void {
+  @HostListener('window:resize', ['$event'])
+  updateSize(event: any) {
+    this.showX = !this.showX;
+    this.showBotao = !this.showBotao;
     if (window.innerWidth < 768) {
-      this.alturaHeader = '162px';
+      this.menuContato = 'none';
+      this.heightHeader = '362px';
       this.topContainerFluid = '205px';
-      this.menuContato = 'none'
+      if (window.innerWidth < 768 && this.showX === true) {
+        this.menuContato = 'block';
+      } else {
+        this.menuContato = 'none';
+        this.heightHeader = '162px';
+      }
     } else {
-      this.alturaHeader = '100vh';
+      this.heightHeader = '100vh';
+      this.menuContato = 'block';
       this.showX = true;
+    } if (this.showX) {
+      this.showBotao = true;
+      this.topContainerFluid = '405px';
+      this.marginTopBodyNavbar = '365px';
+    } else {
+      this.topContainerFluid = '205px';
+      this.marginTopBodyNavbar = '165px';
     }
+
+  }
+
+  ngOnInit(): void {
+
   }
 }
