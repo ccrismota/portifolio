@@ -1,5 +1,5 @@
 import { Component, Host, HostListener, OnDestroy, OnInit, Output } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { ServiceService } from 'src/app/services/service.service';
 
 
@@ -71,15 +71,10 @@ export class AppContentComponent implements OnInit, OnDestroy {
     this.menuContato = 'block';
     this.showX = true;
     this.showBotao = true;
-    // this.topContainerFluid = '405px';
-    // this.marginTopBodyNavbar = '365px';
   }
 
 
   ngOnInit(): void {
-    if (window.innerWidth < 768) {
-      this.menuContato = 'none';
-      this.topContainerFluid = '205px';
-    }
+    this.updateLayout();
   }
 }
