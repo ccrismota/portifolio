@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Projeto } from 'src/app/enums/Projeto';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-portfolio',
@@ -85,7 +85,7 @@ export class PortfolioComponent implements OnInit {
       Java e Spring Boot.  Utilizando Java em conjunto com o framework Spring 
       Boot, para garantir uma arquitetura robusta e escalável para suportar 
       as funcionalidades da aplicação.`,
-      link: 'https://streamable.com/e/atow1h?autoplay=1&muted=1',
+      link: 'https://streamable.com/e/tmboif?autoplay=1&muted=1',
       link_repo: 'https://github.com/ccrismota/infoClick-front',
       link_proj: 'https://github.com/ccrismota/infoClick-back',
     },
@@ -126,7 +126,7 @@ export class PortfolioComponent implements OnInit {
       Barra de Busca Global,
       Paginação e Scroll Infinito.
       `,
-      link: 'https://streamable.com/e/l4ndir?autoplay=1&muted=1',
+      link: 'https://streamable.com/e/ftp40m?autoplay=1&muted=1',
       link_repo: 'https://github.com/ccrismota/testeL5',
       link_proj: 'https://workapirm.netlify.app',
     },
